@@ -1,0 +1,42 @@
+@use "../../partials/Variables.scss" as *;
+@use "../../partials/Mixins.scss" as *;
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signs {
+  display: flex;
+  justify-content: center;
+  margin-top: 28rem;
+  max-width: 70rem;
+  &__container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 74%;
+    justify-content: space-around;
+  }
+  &__item {
+    margin: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    background-color: rgba(0, 250, 154, 0.692) ;
+  }
+  &__image{
+    height: 3rem;
+  }
+
+  @include tablet {
+    margin-top: 5rem;
+  }
+
+}

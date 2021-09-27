@@ -1,0 +1,99 @@
+[
+  {
+    "id": "01",
+    "title": "The one who rules",
+    "name": "Aries",
+    "text": "His ability to be admired by everyone without it going straight to his head makes him a staple in anyone’s life. He knows how to be a leader and a friend, finding that perfect balance between the two roles.",
+    "image": "http://localhost:8080/sign-icons/aries.png",
+    "starimage": "http://localhost:8080/sign-stars/aries-stars.png"
+  
+  },
+  {
+    "id": "02",
+    "title": "The one who strikes your heart",
+    "name": "Taurus",
+    "text": "There’s something about the deliberateness in his actions that touch the hearts of many. Whether it’s through romance or just by letting you know that he's your friend ‘til the end, Taurus knows how to make anyone feel special and loved.",
+    "image": "http://localhost:8080/sign-icons/taurus.png",
+    "starimage": "http://localhost:8080/sign-stars/taurus-stars.png"
+  },
+  {
+    "id": "03",
+    "title": "The one who shines bright",
+    "name": "Gemini",
+    "text": "Gemini might be too intense for some people at first, but there is something about him that intrigues everyone who meets him.He brightens up a room whenever he walks in and when he leaves, you always find yourself missing him.",
+    "image": "http://localhost:8080/sign-icons/gemini.png",
+    "starimage": "http://localhost:8080/sign-stars/gemini-stars.png"
+  },
+  {
+    "id": "04",
+    "title": "The one who is full of moons",
+    "name": "Cancer",
+    "text": "“A gentle, but fearless leader” is the perfect way to describe Cancer because, just like the moon, he is both soft and romantic, yet bold and a trailblazer.But even if he’s ever-changing (like the moon), he is still as reliable as ever.",
+    "image": "http://localhost:8080/sign-icons/cancer.png",
+    "starimage": "http://localhost:8080/sign-stars/cancer-stars.png"
+  },
+  {
+    "id": "05",
+    "title": "The one who is made of sunshine",
+    "name": "Leo",
+    "text": "Leo acts like the world revolves around him because if people were stars and planets, he would definitely be the Sun.He tends to bring light wherever he goes, making it easy to see why people are so attracted to him.",
+    "image": "http://localhost:8080/sign-icons/leo.png",
+    "starimage": "http://localhost:8080/sign-stars/leo-stars.png"
+  },
+  {
+    "id": "06",
+    "title": "The one who stands for themselves",
+    "name": "Virgo",
+    "text": "Virgo knows that the most reliable person you can trust is yourself, which is why he doesn’t often take the advice of others.Virgo is like an all-knowing person who stands strong and tall because he knows that others look to him as a leader.",
+    "image": "http://localhost:8080/sign-icons/virgo.png",
+    "starimage": "http://localhost:8080/sign-stars/virgo-stars.png"
+  },
+  {
+    "id": "07",
+    "title": "The one who is filled with love",
+    "name": "Libra",
+    "text": "All Libra wants is to make sure everyone in his life is well-loved.He will often go out of his way to take care of and please others, which not only makes him incredibly selfless, but also an amazing friend and partner.",
+    "image": "http://localhost:8080/sign-icons/libra.png",
+    "starimage": "http://localhost:8080/sign-stars/libra-stars.png"
+  },
+  {
+    "id": "08",
+    "title": "The one who wins your heart",
+    "name": "Scorpio",
+    "text": "Scorpio can be considered erratic and intense to some, but when you really get to know him, he’s nothing but a big softie.Scorpio’s main goal in life is to make sure his friends and family know that they are tremendously important to him.",
+    "image": "http://localhost:8080/sign-icons/scorpio.png",
+    "starimage": "http://localhost:8080/sign-stars/scorpio-stars.png"
+  },
+  {
+    "id": "09",
+    "title": "The one who seeks",
+    "name": "Sagittarius",
+    "text": "Sagittarius is a free spirit, always open to new experiences. He does not like being tied down by anyone, and actively seeks exciting experiences. Even though he seems like a lone wolf, nothing makes him happier than sharing his experiences and happiness with the people he loves.",
+    "image": "http://localhost:8080/sign-icons/sagittarius.png",
+    "starimage": "http://localhost:8080/sign-stars/sagittarius-stars.png"
+  },
+  {
+    "id": "10",
+    "title": "The one who climbs higher than anyone else",
+    "name": "Capricorn",
+    "text": "Capricorn is always reaching new heights, constantly wanting to learn more and expand his mind.He loves being the person with a wealth of knowledge and, more than that, someone who can share this newfound knowledge with others.",
+    "image": "http://localhost:8080/sign-icons/capricorn.png",
+    "starimage": "http://localhost:8080/sign-stars/capricorn-stars.png"
+  },
+  {
+    "id": "11",
+    "title": "The one who is made with color",
+    "name": "Aquarius",
+    "text": "Aquarius is totally unique and loves it that way. He lives for himself and doesn’t care what anyone thinks of him, which intrigues everyone who knows him.",
+    "image": "http://localhost:8080/sign-icons/aquarius.png",
+    "starimage": "http://localhost:8080/sign-stars/aquarius-stars.png"
+  },
+  {
+    "id": "12",
+    "title": "The one who dreams of the unimaginable",
+    "name": "Pisces",
+    "text": "So many people criticize Pisces for always having his head in the clouds, but in reality, he’s only dreaming of bigger things in this life.He sees life through rose-colored glasses and is always looking for ways to make a difference.",
+    "image": "http://localhost:8080/sign-icons/pisces.png",
+    "starimage": "http://localhost:8080/sign-stars/pisces-stars.png"
+  }
+]

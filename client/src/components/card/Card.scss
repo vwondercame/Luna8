@@ -1,0 +1,90 @@
+@import url("https://use.typekit.net/nqq1jlz.css");
+@import url("https://use.typekit.net/nqq1jlz.css");
+
+.scope-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-family: baskerville-urw, serif;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 70%;
+    width: 70%;
+    max-width: 50rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    &--btn {
+      font-family: baskerville-urw, serif;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+  
+  &__image {
+    max-width: 15rem;
+  }
+
+  &__image-container {
+    background-image: url(../../assets/images/sky.png);
+    background-position: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    &--title{
+    font-family: Tangier;
+    font-size: 6rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    color: #ffffff00;
+    text-align: end;
+    padding-right: 2.5rem;
+    }
+
+  }
+
+  &__text-container {
+    height: 35%;
+    padding: 1.5rem;
+  }
+
+
+  &__buttons {
+    height: 3rem;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    &-item {
+      width: 33%;
+      border: none;
+      font-family: baskerville-urw, serif;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    &-item:nth-child(1) {
+      border-bottom-left-radius: 20px;
+    }
+    &-item:nth-child(2) {
+      width: 35%;
+    }
+    &-item:nth-child(3) {
+      border-bottom-right-radius: 20px;
+    }
+  }
+}
