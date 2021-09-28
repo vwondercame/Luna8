@@ -4,7 +4,7 @@ import Homepage from "./pages/homepage/Homepage";
 import Scopepage from "./pages/scopepage/Scopepage";
 import Logo from "./components/logo/Logo";
 // import signData from "./data/signs.json"
-// import RippleAnimation from "./components/rippleanimation/RippleAnimation"
+import RippleAnimation from "./components/rippleanimation/RippleAnimation"
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route path="/dailyscope" component={Scopepage} />
       </Switch>
     </BrowserRouter>
-    {/* <RippleAnimation /> */}
+    <RippleAnimation />
     </div>
   );
 }
