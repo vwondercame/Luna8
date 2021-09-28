@@ -11,8 +11,10 @@
 .signs {
   display: flex;
   justify-content: center;
-  margin-top: 28rem;
+  margin-top: 30rem;
   max-width: 70rem;
+  position: relative;
+  z-index: 1;
   &__container{
     display: flex;
     flex-wrap: wrap;
@@ -21,6 +23,8 @@
     justify-content: space-around;
   }
   &__item {
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.65, 0.14, 0.48, 0.95);
     margin: 0.75rem;
     display: flex;
     justify-content: center;
@@ -31,12 +35,32 @@
     border-radius: 50%;
     background-color: rgba(0, 250, 154, 0.692) ;
   }
+&__item:hover  {
+    transform: scale(1.4);
+    cursor: pointer;
+ }
+
+
   &__image{
     height: 3rem;
   }
 
+  @include small-tablet {
+    margin-top: 13rem;
+  }
+
   @include tablet {
-    margin-top: 5rem;
+    margin-top: 10rem;
+
+    &__container{
+      width: 57rem;
+    }
+  }
+
+  @include desktop {
+    &__container{
+      width: 69rem;
+    }
   }
 
 }

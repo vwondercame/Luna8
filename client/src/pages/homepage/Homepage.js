@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Canvas, extend, useFrame, useLoader, useThree } from "react-three-fiber";
+import { Suspense, useMemo, useCallback, useRef } from "react";
 import "./Homepage.scss";
 import RippleAnimation from "../../components/rippleanimation/RippleAnimation";
 import signs from "../../data/signs.json";
@@ -14,6 +16,7 @@ class Homepage extends Component {
 
   handleSelectedSign = (id) => {
     let selectedSign = this.state.signs.find((sign) => sign.id === id);
+    console.log(selectedSign);
  
     this.setState({
       selectedSign: selectedSign,
@@ -26,7 +29,6 @@ class Homepage extends Component {
       cardDisplay: false,
     });
   };
- 
 
   render() {
     return (
@@ -53,11 +55,11 @@ class Homepage extends Component {
             selectedSign={this.state.selectedSign}
           />
         ) : null}
-      </section>
         {/* <RippleAnimation /> */}
+      </section>
         </>
     );
-  }
+  } 
 }
 
 export default Homepage;

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Card.scss";
 import signsData from "../../data/signs.json";
+import axios from "axios";
+// import uniqid from "uniqid";
 
 const signs = signsData;
 const URL = "https://aztro.sameerkumar.website";
@@ -8,38 +10,20 @@ const URL = "https://aztro.sameerkumar.website";
 class Card extends Component {
   state = {
     horoscope: null,
-    yesterday: "",
-    today: "",
-    tomorrow: "",
   };
 
-  loadHoroscopes() {
-    fetch(
-      `${URL}/?sign=${this.props.selectedSign.name.toLowerCase()}&day=yesterday`,
-      {
-        method: "POST",
-      }
-    )
-      .then((res) => res.json())
-      .then((yes) => this.setState({ yesterday_horo: yes }));
-
-    fetch(
-      `${URL}/?sign=${this.props.selectedSign.name.toLowerCase()}&day=today`,
-      {
-        method: "POST",
-      }
-    )
-      .then((res) => res.json())
-      .then((to) => this.setState({ today_horo: to }));
-
-    fetch(
-      `https://aztro.sameerkumar.website/?sign=${this.props.selectedSign.name.toLowerCase()}&day=tomorrow`,
-      {
-        method: "POST",
-      }
-    )
-      .then((res) => res.json())
-      .then((tom) => this.setState({ tomorrow_horo: tom }));
+  clickHandle(day) {
+    axios
+      .post(
+        `${URL}/?sign=${this.props.selectedSign.name.toLowerCase()}&day=${day}`
+      )
+      .then((response) => {
+        // this.props.handleSelectingDate(response.data.description);
+        this.setState({
+          horoscope: response.data,
+        });
+      })
+      .catch((error) => console.log(error));
   }
 
   render() {
@@ -49,9 +33,7 @@ class Card extends Component {
           <button
             className="scope-card__inner--btn"
             onClick={this.props.handleModal}
-          >
-            close
-          </button>
+          ></button>
 
           <div className="scope-card__image-container">
             <img
@@ -65,14 +47,31 @@ class Card extends Component {
 
           <div className="scope-card__text-container">
             <p className="scope-card__text-container--description">
-              {this.props.selectedSign.text}
+                {this.state.horoscope ? this.state.horoscope.description
+                 : this.props.selectedSign.text}
+              {/* {this.props.selectedSign.text} */}
             </p>
           </div>
 
           <div className="scope-card__buttons">
-            <button className="scope-card__buttons-item">Yesterday</button>
-            <button className="scope-card__buttons-item">Today</button>
-            <button className="scope-card__buttons-item">Tommorow</button>
+            <button
+              onClick={() => this.clickHandle("yesterday")}
+              className="scope-card__buttons-item"
+            >
+              Yesterday
+            </button>
+            <button
+              onClick={() => this.clickHandle("today")}
+              className="scope-card__buttons-item"
+            >
+              Today
+            </button>
+            <button
+              onClick={() => this.clickHandle("tomorrow")}
+              className="scope-card__buttons-item"
+            >
+              Tomotrow
+            </button>
           </div>
         </div>
       </div>

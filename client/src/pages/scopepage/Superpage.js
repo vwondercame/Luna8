@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Scopepage.scss'
+import './Superpage.scss'
 
 class Scopepage extends Component {
     render() {
