@@ -1,3 +1,5 @@
+@use "../../partials/Variables.scss" as *;
+@use "../../partials/Mixins.scss" as *;
 @import url("https://use.typekit.net/nqq1jlz.css");
 @import url("https://use.typekit.net/nqq1jlz.css");
 
@@ -21,46 +23,94 @@
     height: 70%;
     width: 70%;
     max-width: 50rem;
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
+    backdrop-filter: blur(14px) saturate(200%);
+    -webkit-backdrop-filter: blur(14px) saturate(200%);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+
+    --borderWidth: 3px;
+    background: #1d1f20;
+    position: relative;
+    border-radius: var(--borderWidth);
     &--btn {
-      font-family: baskerville-urw, serif;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 50%;
       position: absolute;
       top: 1rem;
       right: 1rem;
     }
   }
-  
+
+  &__inner::after {
+    content: "";
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(
+      60deg,
+      #ff17e0,
+      #c52ae0,
+      #508bff,
+      #13bed8,
+      #09c8af,
+      #6dff92
+    );
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 5s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   &__image {
+    width: 7rem;
     max-width: 15rem;
   }
 
   &__image-container {
-    background-image: url(../../assets/images/sky.png);
+    height: 25%;
+    // background-image: url(../../assets/images/sky.png);
     background-position: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
 
-    &--title{
-    font-family: Tangier;
-    font-size: 6rem;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-    color: #ffffff00;
-    text-align: end;
-    padding-right: 2.5rem;
+    &--title {
+      font-family: Tangier;
+      font-size: 6rem;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgb(255, 255, 255);
+      color: #ffffff00;
+      text-align: end;
+      padding-right: 2.5rem;
+      position: absolute;
+      right: 0;
     }
-
   }
 
   &__text-container {
     height: 35%;
     padding: 1.5rem;
-  }
 
+    &--description {
+      color: white;
+      font-size: 1.25rem;
+    }
+  }
 
   &__buttons {
     height: 3rem;
@@ -69,22 +119,44 @@
     bottom: 0;
     left: 0;
     width: 100%;
-
+    border-top: 1px solid white;
     &-item {
       width: 33%;
       border: none;
       font-family: baskerville-urw, serif;
       text-transform: uppercase;
       font-weight: 600;
-    }
-    &-item:nth-child(1) {
-      border-bottom-left-radius: 20px;
+      background-color: transparent;
+      color: white;
+      border-right: 1px solid white;
     }
     &-item:nth-child(2) {
       width: 35%;
     }
-    &-item:nth-child(3) {
-      border-bottom-right-radius: 20px;
+  }
+
+  @include small-tablet {
+    &__image {
+      width: 12rem;
+
+      &-container {
+        height: 40%;
+        &--title {
+          padding-right: 3rem;
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    &__image {
+      width: 15rem;
+      &-container {
+        height: 50%;
+        &--title {
+            font-size: 6.75rem;
+          }
+      }
     }
   }
 }

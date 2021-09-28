@@ -104,6 +104,7 @@ function Points() {
 function AnimationCanvas() {
   return (
     <Canvas
+      frameloop="always"
       colorManagement={false}
       camera={{ position: [100, 10, 0], fov: 75 }}
     >
