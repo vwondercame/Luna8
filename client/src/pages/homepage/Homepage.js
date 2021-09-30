@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { Canvas, extend, useFrame, useLoader, useThree } from "react-three-fiber";
-import { Suspense, useMemo, useCallback, useRef } from "react";
+import {Link} from "react-router-dom";
 import "./Homepage.scss";
-import RippleAnimation from "../../components/rippleanimation/RippleAnimation";
 import signs from "../../data/signs.json";
 import Card from "../../components/card/Card";
 
@@ -42,6 +40,7 @@ class Homepage extends Component {
               onClick={() => this.handleSelectedSign(sign.id)}
               className="signs__item"
               id={sign.id}
+              key={sign.id}
             >
               <img className="signs__image" src={sign.image} alt="astro sign icon" />
             </div>
@@ -55,7 +54,7 @@ class Homepage extends Component {
             selectedSign={this.state.selectedSign}
           />
         ) : null}
-        {/* <RippleAnimation /> */}
+      <Link className="signs__link" to="/magic"> Magic </Link>
       </section>
         </>
     );

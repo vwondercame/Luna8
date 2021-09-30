@@ -6,23 +6,23 @@ import circleImg from "../../assets/images/circle.png";
 import { Suspense, useMemo, useCallback, useRef } from "react";
 extend({OrbitControls})
 
-// function CameraControls(){
-//   const {
-//     camera,
-//     gl: {domElement}
-//   } = useThree();
+function CameraControls(){
+  const {
+    camera,
+    gl: {domElement}
+  } = useThree();
 
-//   const controlsRef = useRef();
-//   useFrame(() => controlsRef.current.update())
-//   return(
-//     <orbitControls
-//       ref={controlsRef}
-//       args={[camera, domElement]}
-//       // autoRotate
-//       // autoRotateSpeed={-0.2}
-//     />
-//   );
-// }
+  const controlsRef = useRef();
+  useFrame(() => controlsRef.current.update())
+  return(
+    <orbitControls
+      ref={controlsRef}
+      args={[camera, domElement]}
+      autoRotate
+      autoRotateSpeed={-0.2}
+    />
+  );
+}
 
 function Points() {
   const imgTex = useLoader(THREE.TextureLoader, circleImg);
@@ -54,7 +54,7 @@ function Points() {
 
   useFrame(() => {
     t += 10
-    // a += 0.0001;
+    a += 0.0001;
     const positions = bufferRef.current.array;
 
     let i = 0;
@@ -111,7 +111,7 @@ function AnimationCanvas() {
       <Suspense fallback={null}>
         <Points />
       </Suspense>
-      {/* <CameraControls /> */}
+      <CameraControls />
     </Canvas>
   );
 }

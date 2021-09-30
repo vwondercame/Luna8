@@ -1,11 +1,13 @@
 @use "../../partials/Variables.scss" as *;
 @use "../../partials/Mixins.scss" as *;
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
 
 .page {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .signs {
@@ -40,9 +42,29 @@
     cursor: pointer;
  }
 
-
   &__image{
     height: 3rem;
+  }
+
+  &__link{
+    padding-top: 3rem;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    color: white;
+    font-family: "Raleway";
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 30px #1c00a7, 0 0 40px #00ebd4, 0 0 50px #00bfc2, 0 0 60px #00519d, 0 0 70px #25007b;
+    }
+    
+    to {
+      text-shadow:  0 0 30px #a64dff, 0 0 40px #830afc, 0 0 50px #2404f0, 0 0 60px #5a00ae, 0 0 70px #6c08f0, 0 0 80px #1c07ff;
+    }
   }
 
   @include small-tablet {

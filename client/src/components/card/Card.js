@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./Card.scss";
-import signsData from "../../data/signs.json";
+// import signsData from "../../data/signs.json";
 import axios from "axios";
 // import uniqid from "uniqid";
 
-const signs = signsData;
+// const signs = signsData;
 const URL = "https://aztro.sameerkumar.website";
 
 class Card extends Component {
@@ -18,7 +18,6 @@ class Card extends Component {
         `${URL}/?sign=${this.props.selectedSign.name.toLowerCase()}&day=${day}`
       )
       .then((response) => {
-        // this.props.handleSelectingDate(response.data.description);
         this.setState({
           horoscope: response.data,
         });
@@ -38,7 +37,7 @@ class Card extends Component {
           <div className="scope-card__image-container">
             <img
               className="scope-card__image"
-              src={this.props.selectedSign.starimage}
+              src={this.props.selectedSign.starimage} alt='sign constellation'
             />
             <h2 className="scope-card__image-container--title">
               {this.props.selectedSign.name}
@@ -49,7 +48,6 @@ class Card extends Component {
             <p className="scope-card__text-container--description">
                 {this.state.horoscope ? this.state.horoscope.description
                  : this.props.selectedSign.text}
-              {/* {this.props.selectedSign.text} */}
             </p>
           </div>
 

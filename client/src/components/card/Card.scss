@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
   font-family: baskerville-urw, serif;
 
   &__inner {
@@ -123,14 +123,16 @@
     &-item {
       width: 33%;
       border: none;
-      font-family: baskerville-urw, serif;
+      font-family: "Raleway";
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: bolder;
       background-color: transparent;
       color: white;
-      border-right: 1px solid white;
+      // border-right: 1px solid white;
     }
     &-item:nth-child(2) {
+      border-right: 1px solid white;
+      border-left: 1px solid white;
       width: 35%;
     }
   }

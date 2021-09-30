@@ -1,0 +1,232 @@
+@use "../../partials/Variables.scss" as *;
+@use "../../partials/Mixins.scss" as *;
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+
+body {
+  overflow-x: hidden;
+}
+
+.epos {
+  position: absolute;
+  top: -2rem;
+  left: 14rem;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.eball {
+  height: 350px;
+  width: 350px;
+  background: rgb(30, 30, 30);
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset -10px 10px 50px rgba(255, 255, 255, 0.4),
+    inset 5px -5px 50px rgba(0, 0, 0, 1),
+    inset 50px -50px 200px rgba(0, 0, 0, 1),
+    inset 0px -20px 20px rgba(60, 0, 60, 1);
+}
+
+.egrad {
+  position: absolute;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(242, 242, 242, 0.2) 7%,
+    rgba(30, 30, 30, 0.1) 30%,
+    rgba(30, 30, 30, 0) 100%
+  );
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  left: 60%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.ewin {
+  position: absolute;
+  background: linear-gradient(
+    45deg,
+    rgba(20, 0, 20, 1) 0%,
+    rgba(40, 0, 40, 1) 100%
+  );
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  border: solid 4px rgba(20, 20, 20, 0.8);
+  box-shadow: 10px -10px 10px rgba(20, 20, 20, 0.6),
+    10px -10px 1px rgba(20, 20, 20, 0.5), -10px -10px 1px rgba(20, 20, 20, 0.5),
+    10px 10px 1px rgba(50, 50, 50, 0.5), -10px 10px 1px rgba(50, 50, 50, 0.5),
+    8px -10px 10px rgba(20, 20, 20, 0.6), -8px 10px 10px rgba(60, 60, 60, 0.6),
+    inset -10px 10px 40px rgba(200, 0, 20, 0.05),
+    inset 10px -10px 40px rgba(20, 0, 200, 0.1);
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.triangle {
+  -webkit-transform: translate(-50%, -50%) rotate(5deg);
+  transform: translate(-50%, -50%) rotate(5deg);
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  left: 50%;
+  top: 60%;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  border-top: 90px solid rgba(60, 10, 120, 0);
+  opacity: 0;
+  transition: ease-in all 0.2s;
+}
+
+.textbox {
+  font: 400 11px Oswald;
+  text-shadow: 1px 1px 2px rgba(40, 0, 200, 0.8);
+  color: rgba(240, 220, 240, 0.8);
+  text-align: center;
+  line-height: 1.1;
+  -webkit-transform: translate(-50%, -50%) rotate(5deg);
+  transform: translate(-50%, -50%) rotate(5deg);
+  position: absolute;
+  text-transform: uppercase;
+  width: 48px;
+  height: 50px;
+  left: 50%;
+  top: 53%;
+  opacity: 0;
+  transition: ease-in all 0.2s;
+}
+
+.eball:hover .textbox {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: ease-in all 0.2s;
+}
+
+.eball:hover .triangle {
+  border-top: 90px solid rgba(60, 10, 120, 0.9);
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+  transition: ease-in all 0.2s;
+}
+
+.magicBall {
+  &__ball {
+    position: absolute;
+    top: -7rem;
+    z-index: 5;
+  }
+  &__page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    left: 35%;
+  }
+  &-container {
+    position: absolute;
+    top: 10rem;
+    left: 14rem;
+    z-index: 2;
+    width: 99%;
+    margin: 0 auto;
+    height: 10rem;
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 42px;
+  }
+  form {
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__input {
+    font-weight: 600;
+    border: none;
+    padding: 1rem;
+    color: #5900ff;
+    width: 50vw;
+    border-radius: 30px;
+    height: 20px;
+    font-size: 14px;
+    text-align: center;
+    max-width: 20rem;
+    --borderWidth: 3px;
+    position: relative;
+    border-radius: var(--borderWidth);
+
+    &-box {
+      z-index: 1;
+      --borderWidth: 7px;
+      position: relative;
+      border-radius: var(--borderWidth);
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__input::placeholder {
+    color: rgba(133, 133, 133, 0.842);
+    font-weight: 600;
+  }
+
+  &__button {
+    width: 10rem;
+    height: 2.5rem;
+    cursor: pointer;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #ffffff;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: transparent;
+    text-transform: uppercase;
+  }
+
+  &__button:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+    }
+
+  &__answer {
+    margin-top: 1.5rem;
+    font-family: "Raleway";
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #6900a7,
+        0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+        0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+}
