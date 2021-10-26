@@ -2,7 +2,7 @@ import './RippleAnimation.scss'
 import * as THREE from "three";
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import { Canvas, extend, useFrame, useLoader, useThree } from "react-three-fiber";
-import circleImg from "../../assets/images/circle.png";
+import circleImg from "../../assets/circle.png";
 import { Suspense, useMemo, useCallback, useRef } from "react";
 extend({OrbitControls})
 

@@ -16,7 +16,6 @@ const answers = [
   "Should you be asking this?",
   "Outlook is not so good",
   "Very doubtful",
-  "Feeling hazy",
   "Ummm maybe not",
   "I'll let you know",
   "Cannot predict now",
